@@ -16,10 +16,9 @@ msgbox % arrs
                       
 arr := ["auto", "hot", brr]
 brr := ["auto", "hot", arr]
-arrs := ahkvec2json(json, brr) ; throws Exception for circularity
+arrs := ahkvec2json(json, brr) ; throws Exception for exceeding recursion limit
 msgbox % arrs
-return
-
+ 
 !q::exitapp
 !r::reload
 ```
