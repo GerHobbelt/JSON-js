@@ -1,11 +1,4 @@
-# autohotkey wrapper
-## json_init
-`json := json_init()`
-## ahk2vector2json
-`jsonstring := ahkvector2json(json, vector)`
-
-## Example
-```autohotkey
+            
 json := json_init()                
 arr := ["auto", "hot", "key"]
 arrs := ahkvec2json(json, arr)
@@ -18,8 +11,8 @@ arr := ["auto", "hot", brr]
 brr := ["auto", "hot", arr]
 arrs := ahkvec2json(json, brr) ; throws Exception for circularity
 msgbox % arrs
-return
+
+
 
 !q::exitapp
 !r::reload
-```
