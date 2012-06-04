@@ -11,7 +11,7 @@ arr := ["auto", "hot", brr]
 brr := ["auto", "hot", arr]
 arrs := ahkvec2json(json, brr) ; throws Exception for exceeding recursion limit
 msgbox % arrs
-
+ 
 
 
 !q::exitapp
