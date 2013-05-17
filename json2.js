@@ -1,4 +1,5 @@
-/*
+/**
+ * @license
     json2.js
     2012-10-08
 
@@ -8,6 +9,8 @@
 
     See http://www.JSON.org/js.html
 
+*/
+/*
 
     This code should be minified before deployment.
     See http://javascript.crockford.com/jsmin.html
