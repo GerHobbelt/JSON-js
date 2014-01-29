@@ -146,13 +146,14 @@
     redistribute.
 */
 
-/*jslint evil: true, regexp: true */
+/*jslint browser: true, evil: true, regexp: true */
 
 /*members "", "\b", "\t", "\n", "\f", "\r", "\"", JSON, "\\", apply,
     call, charCodeAt, getUTCDate, getUTCFullYear, getUTCHours,
     getUTCMinutes, getUTCMonth, getUTCSeconds, hasOwnProperty, join,
     lastIndex, length, parse, prototype, push, replace, slice, stringify,
-    test, toJSON, toString, valueOf
+    test, toJSON, toString, valueOf,
+    stringifyJS, documentMode, createElement, value
 */
 
 
@@ -400,6 +401,13 @@ if (typeof JSON !== 'object') {
     }
     if (typeof JSON.stringify !== 'function') {
         JSON.stringify = JSON.stringifyJS;
+    } else {
+        // check for known IE8 serialization error; for more details see
+        // https://code.google.com/p/jquery-json/issues/detail?id=44
+        // http://blogs.msdn.com/b/jscript/archive/2009/06/23/serializing-the-value-of-empty-dom-elements-using-native-json-in-ie8.aspx
+        if ((document.documentMode || 100) < 9 && JSON.stringify(document.createElement("input").value) === '"null"') {
+            JSON.stringify = JSON.stringifyJS;
+        }
     }
 
 
