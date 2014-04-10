@@ -1,0 +1,27 @@
+{
+  "name": "json2",
+  "version": "2014.02.04",
+  "homepage": "https://github.com/pandell/JSON-js",
+  "authors": [
+    "Douglas Crockford <douglas@crockford.com>",
+    "Milan Gardian <milang@pandell.com>"
+  ],
+  "description": "JSON in JavaScript (Pandell fork)",
+  "main": "json2.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "json",
+    "javascript"
+  ],
+  "license": "Public Domain",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
